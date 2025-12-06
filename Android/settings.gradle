@@ -1,18 +1,7 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
+include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir,
+        'flutter/.android/include_flutter.groovy'
+))
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-rootProject.name = "memoria"
-include(":app")
