@@ -1,5 +1,6 @@
 // android/settings.gradle
 
+// The plugins block must come first in settings.gradle
 pluginManagement {
     def flutterSdkPath = {
         def properties = new Properties()
@@ -9,10 +10,21 @@ pluginManagement {
         return flutterSdkPath
     }
     settings.ext.flutterSdkPath = flutterSdkPath()
+    
+    // Add the Flutter Gradle plugin definition here
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+// Apply the Flutter Gradle plugin using the plugins block
+plugins {
+    id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
 }
 
 include ':app'
 
-// This section is what links the Gradle project to the Flutter module
-setBinding(new Binding([gradle: this]))
-apply from: settings.ext.flutterSdkPath + "/packages/flutter_tools/gradle/app_plugin_loader.gradle"
+// This line is now deprecated and removed:
+// apply from: settings.ext.flutterSdkPath + "/packages/flutter_tools/gradle/app_plugin_loader.gradle"
