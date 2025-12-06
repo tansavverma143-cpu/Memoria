@@ -1,11 +1,14 @@
 buildscript {
+    ext.kotlin_version = '1.8.21' // Updated to a modern, stable version
     repositories {
         google()
         mavenCentral()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+        classpath 'com.android.tools.build:gradle:7.3.0' // A stable version for Flutter 3.x
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Google Services plugin is added here if needed, but not strictly required for a minimal build.
     }
 }
 
@@ -16,6 +19,13 @@ allprojects {
     }
 }
 
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
