@@ -1,0 +1,3 @@
+-keep class io.flutter.embedding.** { *; }
+-keep class com.razorpay.** { *; }
+-keep class com.google.android.gms.** { *; }
