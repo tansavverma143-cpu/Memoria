@@ -43,7 +43,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "tech.mymemoria.memoria"
+        applicationId "com.mymemoria.memoria"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
