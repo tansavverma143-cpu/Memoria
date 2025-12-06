@@ -1,7 +1,7 @@
 // android/settings.gradle
 
-// The plugins block must come first in settings.gradle
 pluginManagement {
+    // 1. Define where the Flutter SDK is located
     def flutterSdkPath = {
         def properties = new Properties()
         file("local.properties").withInputStream { properties.load(it) }
@@ -11,7 +11,7 @@ pluginManagement {
     }
     settings.ext.flutterSdkPath = flutterSdkPath()
     
-    // Add the Flutter Gradle plugin definition here
+    // 2. Define the repositories to search for plugins (THIS IS THE CRITICAL FIX)
     repositories {
         gradlePluginPortal()
         google()
@@ -19,12 +19,9 @@ pluginManagement {
     }
 }
 
-// Apply the Flutter Gradle plugin using the plugins block
+// 3. Apply the Flutter Gradle plugin using the plugins block
 plugins {
     id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
 }
 
 include ':app'
-
-// This line is now deprecated and removed:
-// apply from: settings.ext.flutterSdkPath + "/packages/flutter_tools/gradle/app_plugin_loader.gradle"
