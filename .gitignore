@@ -1,0 +1,161 @@
+# Android
+android/.gradle
+android/.idea
+android/gradle-wrapper.jar
+android/local.properties
+android/**/build
+android/**/local.properties
+android/**/gradle-wrapper.jar
+android/**/.gradle
+android/**/.idea
+android/**/*.iml
+android/key.properties
+android/app/google-services.json
+
+# iOS
+ios/.generated
+ios/Flutter/.last_build_id
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/App.framework.dSYM
+ios/Flutter/Flutter.framework.dSYM
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Flutter/flutter_assets/
+ios/Flutter/flutter_export_environment.sh
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Pods
+ios/.symlinks
+ios/Flutter/flutter_export_environment.sh
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+ios/Runner.xcodeproj/xcuserdata/
+
+# Build
+build/
+*.apk
+*.ipa
+*.aab
+*.dmg
+*.pkg
+*.msi
+*.exe
+*.dart.js
+*.part.js
+*.js.deps
+*.js.map
+*.info.json
+
+# Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+pubspec.lock
+.pubspec.lock
+.dart
+.dart.snapshot
+*.dart.js
+*.dart.snapshot
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/compiler.xml
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/codeStyles/
+.DS_Store
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+firebase-debug.log*
+logs/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter/
+flutter_*.png
+coverage/
+
+# Packages
+packages/
+
+# Web
+.webpack/
+.cache/
+.node/
+npm/
+yarn.lock
+package-lock.json
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Test
+.coverage
+.coverage.*
+.cache
+.pytest_cache
+/coverage
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Custom
+*.keystore
+*.jks
+*.p12
+*.cert
+*.cer
+*.crt
+*.pem
+*.der
+*.pfx
+memoria_backup_*
+*.memoria
+
+# Exceptions (keep these)
+!pubspec.lock
+!README.md
+!CHANGELOG.md
+!LICENSE
+!CONTRIBUTING.md
