@@ -1,5 +1,3 @@
-// android/settings.gradle
-
 pluginManagement {
     // 1. Define where the Flutter SDK is located
     def flutterSdkPath = {
@@ -11,7 +9,7 @@ pluginManagement {
     }
     settings.ext.flutterSdkPath = flutterSdkPath()
     
-    // 2. Define the repositories to search for plugins (THIS IS THE CRITICAL FIX)
+    // 2. Define the repositories to search for plugins (THIS MUST BE HERE)
     repositories {
         gradlePluginPortal()
         google()
